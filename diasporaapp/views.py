@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 from django.contrib.auth import logout
 from django.shortcuts import redirect
+from .forms import ContactForm
 
 def index(request):
     return HttpResponse('Tongasoa')
@@ -22,3 +23,13 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('index')
+
+
+def contact(request):
+    if request.method == 'POST':
+        formContact = ContactForm(request.POST)
+        if formContact.is_valid():
+            return render(request, 'login.html')
+    else:
+        formContact = ContactForm()
+        return render(request, 'contact.html', {'form_contact': formContact})

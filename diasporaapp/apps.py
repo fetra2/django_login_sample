@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class CavpappConfig(AppConfig):
+class diasporaappConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'cavpapp'
+    name = 'diasporaapp'
