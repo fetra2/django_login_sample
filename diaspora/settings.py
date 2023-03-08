@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'diaspora.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'cavp',
+        'NAME': 'diaspo_django',
         'USER': 'postgres',
         'PASSWORD': 'root',
         'HOST': '192.168.88.213',

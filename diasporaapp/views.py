@@ -6,7 +6,7 @@ from django.shortcuts import redirect
 from .forms import ContactForm
 
 def index(request):
-    return HttpResponse('Tongasoa')
+    return render(request, 'login.html')
 def login_view(request):
     if request.method == 'POST':
         username = request.POST['username']
