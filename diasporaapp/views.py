@@ -3,10 +3,11 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 from django.contrib.auth import logout
 from django.shortcuts import redirect
-from .forms import ContactForm
+from .forms import ContactForm, infoClientForm
 
 def index(request):
     return render(request, 'login.html')
+
 def login_view(request):
     if request.method == 'POST':
         username = request.POST['username']
